@@ -1,0 +1,32 @@
+Api de cadastro de clientes:
+
+//rota de cadastro de um novo cliente:
+url: ip:3000/clientes
+method: post
+body: json
+atributos:
+nome:string, 
+cpf: string,
+email:string
+
+//rota de consulta de um cliente pelo ID:
+url: ip:3000/clientes/{ID}
+method: get
+
+//rota de exclusão de um cliente pelo ID:
+url: ip:3000/clientes/{ID}
+method: delete
+
+//rota de atualização de um cliente pelo ID:
+url: ip:3000/clientes/{ID}
+method: put
+body: json
+atributos:
+nome:string, 
+cpf: string,
+email:string
+obs.: só será atualizado o atributo que for enviado no corpo
+
+//rota de consulta de todos os clientes cadastrados:
+url: ip:3000/clientes
+method: get
