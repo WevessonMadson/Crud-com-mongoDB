@@ -89,11 +89,15 @@ app.put("/clientes/:id", (req, resp) => {
 
 //rota de consulta de todos os clientes cadastrados:
 app.get("/clientes", (req, resp) => {
-    resp.send(JSON.stringify(clientesRead()));
+    if (clientesRead().length == 0){
+        resp.send({"message": "Não há clientes cadastrados."})
+    }else {
+        resp.send(JSON.stringify(clientesRead()));
+    }
 });
 
 
 
-app.listen(3000, () => console.log("Servidor online..."));
+app.listen(3000, () => console.log("Servidor online em http://localhost:3000"));
 
 
