@@ -1,6 +1,7 @@
 Api de cadastro de clientes:
 
-//rota de cadastro de um novo cliente:
+// rota de cadastro de um novo cliente:
+
 url: http://localhost:3000/clientes
 method: post
 body: json
@@ -11,15 +12,21 @@ atributos:
 "email": "string"
 }
 
-//rota de consulta de um cliente pelo ID:
+
+// rota de consulta de um cliente pelo ID:
+
 url: http://localhost:3000/clientes/{ID}
 method: get
 
-//rota de exclusão de um cliente pelo ID:
+
+// rota de exclusão de um cliente pelo ID:
+
 url: http://localhost:3000/clientes/{ID}
 method: delete
 
-//rota de atualização de um cliente pelo ID:
+
+// rota de atualização de um cliente pelo ID:
+
 url: http://localhost:3000/clientes/{ID}
 method: put
 body: json
@@ -29,8 +36,17 @@ atributos:
 "cpf": "string",
 "email": "string"
 }
-obs.: só será atualizado o atributo que for enviado no corpo
+obs.: só será atualizado o atributo que for enviado no corpo da requisição
 
-//rota de consulta de todos os clientes cadastrados:
+
+// rota de consulta de todos os clientes cadastrados:
+
 url: http://localhost:3000/clientes
 method: get
+
+
+// rota para geração de um relatório em pdf com todos os clientes:
+url: http://localhost:3000/relatorio/clientes
+method: get
+
+obs.: o cliente será gerado em ./src/
