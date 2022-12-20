@@ -49,4 +49,4 @@ method: get
 url: http://localhost:3000/relatorio/clientes
 method: get
 
-obs.: o cliente será gerado em ./src/
+obs.: o realtório será gerado em ./src/

@@ -1,4 +1,8 @@
-import app from './src/router.js';
+import app from './src/index.js';
+import * as dotenv from 'dotenv';
+dotenv.config()
+import { startDB } from './src/db/startDB.js';
+startDB();
 
 const porta = 3000;
 
